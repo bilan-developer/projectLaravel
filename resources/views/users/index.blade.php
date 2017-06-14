@@ -17,14 +17,18 @@
                                         <td>№</td>
                                         <td>Email</td>
                                         <td>login</td>
+                                        <td>activ</td>
+                                        <td>Ip</td>
                                     </tr>
-                                    @foreach($users as $user)
+                                    {{--@foreach($users as $user)--}}
                                     <tr>
-                                        <td> {{$user->id}}</td>
-                                        <td> {{$user->name}}</td>
-                                        <td> {{$user->email}}</td>
+                                        <td> {{$user['user']->id}}</td>
+                                        <td> {{$user['user']->name}}</td>
+                                        <td> {{$user['user']->email}}</td>
+                                        <td> {{$user['time']}}</td>
+                                        <td> {{$user['ip']}}</td>
                                     </tr>
-                                    @endforeach
+                                    {{--@endforeach--}}
                                 </table>
                             </div>
                         </div>

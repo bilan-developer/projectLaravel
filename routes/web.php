@@ -21,4 +21,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 //Route::get('/users', function () {
 //    return 'Hello World';
 //});
-Route::get('/users', 'UsersController@index')->name('index');
+//Route::get('/users', 'UsersController@index')->name('index');
+Route::middleware('history')->resource('users','UsersController');
+Route::middleware('history')->resource('home','HomeController');
+

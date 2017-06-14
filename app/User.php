@@ -41,4 +41,11 @@ class User extends Authenticatable
 
          return($users);
     }
+
+    public function getKey(){
+        if (! $this->exists) {
+            throw new ModelNotFoundException();
+        }
+        return $this->getTable() . '#' . $this->id;
+    }
 }
